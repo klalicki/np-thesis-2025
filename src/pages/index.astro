@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
 import { getCollection, getEntry } from "astro:content";
@@ -13,5 +14,15 @@ const allProjects = await getCollection("projects");
   <h2>People</h2>
   <p>{JSON.stringify(allPeople)}</p>
   <h2>Projects</h2>
-  {JSON.stringify(allProjects)}
+  {
+    allProjects.map((item) => {
+      const contents = item.rendered?.html.split("\n<hr>\n");
+      return (
+        <div>
+          {contents[0]}
+          <Image src={item.data.thumbnail.src} alt={"hi"} />;
+        </div>
+      );
+    })
+  }
 </Layout>

@@ -11,19 +11,30 @@ const peopleCollection = defineCollection({
   }),
   schema: z.object({}),
 });
-const projectCollection2 = defineCollection({
+const projectCollection = defineCollection({
   loader: glob({
     pattern: "*/project.md",
     base: "./src/content/people",
     generateId: (options) => {
-      return "bla";
       return options.entry.split("/")[0];
     },
   }),
-  schema: z.object({}),
+  schema: ({ image }) =>
+    z.object({
+      thumbnail: z.object({
+        alt: z.string(),
+        src: image(),
+      }),
+      images: z.array(
+        z.object({
+          alt: z.string(),
+          src: image(),
+        })
+      ),
+    }),
 });
 
 export const collections = {
   people: peopleCollection,
-  projects: projectCollection2,
+  projects: projectCollection,
 };
