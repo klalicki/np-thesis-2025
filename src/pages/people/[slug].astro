@@ -7,6 +7,12 @@ export const getStaticPaths = async () => {
     params: { slug: item.id },
   }));
 };
+const slug = Astro.params.slug;
+
+
 ---
 
 <h1>Person</h1>
+<code>
+  {JSON.stringify(entry)}
+</code>

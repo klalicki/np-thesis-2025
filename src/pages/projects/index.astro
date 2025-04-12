@@ -1,0 +1,14 @@
+---
+import { getCollection } from "astro:content";
+
+const people = await getCollection("people");
+---
+
+<h1>Projects</h1>
+{
+  people.map((person) => {
+    return (
+      <a href={"/" + person.data.projectSlug + "/"}>{person.data.title}</a>
+    );
+  })
+}
