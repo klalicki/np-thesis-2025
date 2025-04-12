@@ -8,8 +8,7 @@ export const getStaticPaths = async () => {
   }));
 };
 const slug = Astro.params.slug;
-
-
+const entry = await getEntry("people", slug);
 ---
 
 <h1>Person</h1>

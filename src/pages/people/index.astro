@@ -7,6 +7,6 @@ const people = await getCollection("people");
 <h1>People</h1>
 {
   people.map((person) => {
-    return <a href={"/" + person.id + "/"}>{person.data.name}</a>;
+    return <a href={"/people/" + person.id + "/"}>{person.data.name}</a>;
   })
 }

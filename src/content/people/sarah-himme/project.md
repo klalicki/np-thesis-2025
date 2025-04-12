@@ -2,7 +2,7 @@
 name: Sarah Himme
 pronouns: she/they
 location: Cobleskill, NY
-headshot: sarah-himme.webp
+headshot: "./sarah-himme.webp"
 portfolio: https://sarahhimme.com
 
 title: "Love Where You Live: A Community Mural Proposal"

@@ -8,7 +8,9 @@ const people = await getCollection("people");
 {
   people.map((person) => {
     return (
-      <a href={"/" + person.data.projectSlug + "/"}>{person.data.title}</a>
+      <a href={"/projects/" + person.data.projectSlug + "/"}>
+        {person.data.title}
+      </a>
     );
   })
 }
