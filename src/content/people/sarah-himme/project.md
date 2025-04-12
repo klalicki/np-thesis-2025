@@ -6,6 +6,7 @@ headshot: sarah-himme.webp
 portfolio: https://sarahhimme.com
 
 title: "Love Where You Live: A Community Mural Proposal"
+projectSlug: love-where-you-live
 thumbnail:
   src: "love-where-you-live-thumbnail.webp"
   alt: "Thumbnail Description"

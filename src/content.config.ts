@@ -3,7 +3,7 @@ import { glob } from "astro/loaders";
 
 const peopleCollection = defineCollection({
   loader: glob({
-    pattern: "*/project.md",
+    pattern: "*/**.md",
     base: "./src/content/people",
     generateId: (options) => {
       return options.entry.split("/")[0];
@@ -17,6 +17,7 @@ const peopleCollection = defineCollection({
       headshot: image(),
       portfolio: z.string(),
       title: z.string(),
+      projectSlug: z.string(),
       thumbnail: z.object({
         alt: z.string(),
         src: image(),

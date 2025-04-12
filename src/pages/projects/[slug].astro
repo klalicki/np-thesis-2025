@@ -1,0 +1,12 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection, getEntry } from "astro:content";
+export const getStaticPaths = async () => {
+  const allPeople = await getCollection("people");
+  return allPeople.map((item) => ({
+    params: { slug: item.data.projectSlug },
+  }));
+};
+---
+
+<h1>Project</h1>
