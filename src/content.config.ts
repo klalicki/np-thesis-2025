@@ -3,16 +3,6 @@ import { glob } from "astro/loaders";
 
 const peopleCollection = defineCollection({
   loader: glob({
-    pattern: "*/bio.md",
-    base: "./src/content/people",
-    generateId: (options) => {
-      return options.entry.split("/")[0];
-    },
-  }),
-  schema: z.object({}),
-});
-const projectCollection = defineCollection({
-  loader: glob({
     pattern: "*/project.md",
     base: "./src/content/people",
     generateId: (options) => {
@@ -21,6 +11,12 @@ const projectCollection = defineCollection({
   }),
   schema: ({ image }) =>
     z.object({
+      name: z.string(),
+      pronouns: z.string(),
+      location: z.string(),
+      headshot: image(),
+      portfolio: z.string(),
+      title: z.string(),
       thumbnail: z.object({
         alt: z.string(),
         src: image(),
@@ -36,5 +32,4 @@ const projectCollection = defineCollection({
 
 export const collections = {
   people: peopleCollection,
-  projects: projectCollection,
 };
