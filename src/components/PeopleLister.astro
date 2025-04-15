@@ -1,0 +1,46 @@
+---
+import { getCollection } from "astro:content";
+import Image from "astro/components/Image.astro";
+
+const people = await getCollection("people");
+---
+
+<h1>People</h1>
+<div class="people-list">
+  {
+    people.map((person) => {
+      return (
+        <a class="people-card" href={"/people/" + person.id + "/"}>
+          <Image
+            class="people-card-image"
+            src={person.data.headshot}
+            alt={person.data.name}
+          />
+          <p class="people-card-name">{person.data.name}</p>
+        </a>
+      );
+    })
+  }
+</div>
+
+<style>
+  .people-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .people-card {
+    flex-basis: 330px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+  }
+  .people-card-image {
+    width: auto;
+    height: auto;
+  }
+</style>

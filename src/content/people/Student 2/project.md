@@ -4,6 +4,7 @@ pronouns: she/they
 location: Cobleskill, NY
 headshot: "sarah-himme.webp"
 portfolio: https://sarahhimme.com
+
 title: "Love Where You Live: A Community Mural Proposal"
 thumbnail:
   src: "love-where-you-live-thumbnail.webp"

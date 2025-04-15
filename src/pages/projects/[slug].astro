@@ -1,14 +1,17 @@
 ---
 import { getCollection, getEntry } from "astro:content";
+import slugify from "../../helpers/slugify";
 export const getStaticPaths = async () => {
   const allPeople = await getCollection("people");
   return allPeople.map((item) => ({
-    params: { slug: item.data.projectSlug },
+    params: { slug: slugify(item.data.title) },
   }));
 };
 const projectSlug = Astro.params.slug;
 const collection = await getCollection("people");
-const entry = collection.find((item) => item.data.projectSlug === projectSlug);
+const entry = collection.find(
+  (item) => slugify(item.data.title) === projectSlug
+);
 ---
 
 <h1>Project</h1>

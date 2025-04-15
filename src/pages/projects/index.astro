@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import slugify from "../../helpers/slugify";
 
 const people = await getCollection("people");
 ---
@@ -8,7 +9,7 @@ const people = await getCollection("people");
 {
   people.map((person) => {
     return (
-      <a href={"/projects/" + person.data.projectSlug + "/"}>
+      <a href={"/projects/" + slugify(person.data.title) + "/"}>
         {person.data.title}
       </a>
     );

@@ -1,12 +1,13 @@
 import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
+import slugify from "./helpers/slugify";
 
 const peopleCollection = defineCollection({
   loader: glob({
     pattern: "*/**.md",
     base: "./src/content/people",
     generateId: (options) => {
-      return options.entry.split("/")[0];
+      return slugify(options.entry.split("/")[0]);
     },
   }),
   schema: ({ image }) =>
@@ -17,7 +18,6 @@ const peopleCollection = defineCollection({
       headshot: image(),
       portfolio: z.string(),
       title: z.string(),
-      projectSlug: z.string(),
       thumbnail: z.object({
         alt: z.string(),
         src: image(),
