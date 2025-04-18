@@ -1,5 +1,5 @@
 ---
-import { getCollection, getEntry } from "astro:content";
+import { getCollection, getEntry, render } from "astro:content";
 import slugify from "../../helpers/slugify";
 export const getStaticPaths = async () => {
   const allPeople = await getCollection("people");
@@ -12,6 +12,10 @@ const collection = await getCollection("people");
 const entry = collection.find(
   (item) => slugify(item.data.title) === projectSlug
 );
+if (!entry) {
+  throw new Error(`Project not found for slug: ${projectSlug}`);
+}
+const { Content } = await render(entry);
 ---
 
 <h1>Project</h1>
@@ -19,3 +23,5 @@ const entry = collection.find(
 <code>
   {JSON.stringify(entry)}
 </code>
+
+<Content />
