@@ -26,6 +26,7 @@ const peopleCollection = defineCollection({
         z.object({
           alt: z.string(),
           src: image(),
+          size: z.optional(z.number()),
         })
       ),
     }),

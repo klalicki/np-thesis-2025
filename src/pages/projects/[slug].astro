@@ -1,6 +1,7 @@
 ---
 import { getCollection, getEntry, render } from "astro:content";
 import slugify from "../../helpers/slugify";
+import Gallery from "../../components/Gallery.astro";
 export const getStaticPaths = async () => {
   const allPeople = await getCollection("people");
   return allPeople.map((item) => ({
@@ -24,7 +25,9 @@ const { Content } = await render(entry);
 <h1>Project</h1>
 
 <code>
-  {JSON.stringify(entry)}
+  <!-- {JSON.stringify(entry)} -->
 </code>
 
 <Content />
+
+<Gallery images={entry.data.images} />

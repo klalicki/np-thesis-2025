@@ -14,10 +14,13 @@ thumbnail:
 images:
   - src: "celina1.png"
     alt: ""
+    size: 2
   - src: "celina2.png"
     alt: ""
+    size: 1
   - src: "celina3.png"
     alt: ""
+    size: 1
 ---
 
 Mending one’s clothing used to be essential, not a choice. Before the introduction of fast fashion in the late 1900s, it was very common for people to make repairs to their clothing for various types of wear and tear. Nowadays, most people throw away their clothing when it isn’t perfect anymore; this, paired with the overconsumption of clothing is creating an exorbitant excess of textile waste that is harmful to the environment.
