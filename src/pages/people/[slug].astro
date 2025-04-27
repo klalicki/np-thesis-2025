@@ -1,6 +1,7 @@
 ---
 import type { GetStaticPaths } from "astro";
 import { getCollection, getEntry } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
 export const getStaticPaths = async () => {
   const allPeople = await getCollection("people");
   return allPeople.map((item) => ({
@@ -11,7 +12,9 @@ const slug = Astro.params.slug;
 const entry = await getEntry("people", slug);
 ---
 
-<h1>Person</h1>
-<code>
-  {JSON.stringify(entry)}
-</code>
+<Layout>
+  <h1>Person</h1>
+  <code>
+    {JSON.stringify(entry)}
+  </code>
+</Layout>

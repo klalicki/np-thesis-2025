@@ -16,6 +16,8 @@ const peopleCollection = defineCollection({
       pronouns: z.string(),
       location: z.string(),
       headshot: image(),
+      headshotAlt: image(),
+
       portfolio: z.string(),
       title: z.string(),
       thumbnail: z.object({

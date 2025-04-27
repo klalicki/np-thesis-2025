@@ -2,6 +2,7 @@
 import { getCollection, getEntry, render } from "astro:content";
 import slugify from "../../helpers/slugify";
 import Gallery from "../../components/Gallery.astro";
+import Layout from "../../layouts/Layout.astro";
 export const getStaticPaths = async () => {
   const allPeople = await getCollection("people");
   return allPeople.map((item) => ({
@@ -19,15 +20,32 @@ if (!entry) {
 const { Content } = await render(entry);
 ---
 
-<!-- not sure why this is needed here --><!-- TODO: investigate this and see if it can be placed somewhere more global -->
-<meta charset="utf-8" />
+<Layout>
+  <div class="project-sidebar">
+    <h2>Project Sidebar</h2>
+    <p>Project sidebar content</p>
+  </div>
+  <div class="project-main">
+    <h1>Project</h1>
+    <Content />
 
-<h1>Project</h1>
+    <Gallery images={entry.data.images} />
+  </div>
+  <!-- not sure why this is needed here --><!-- TODO: investigate this and see if it can be placed somewhere more global -->
 
-<code>
-  <!-- {JSON.stringify(entry)} -->
-</code>
+  <code>
+    <!-- {JSON.stringify(entry)} -->
+  </code>
 
-<Content />
-
-<Gallery images={entry.data.images} />
+  <style>
+    @media screen and (min-width: 768px) {
+      .project-sidebar {
+        width: 300px;
+        position: fixed;
+      }
+      .project-main {
+        padding-left: 300px;
+      }
+    }
+  </style>
+</Layout>

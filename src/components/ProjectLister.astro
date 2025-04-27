@@ -1,0 +1,40 @@
+---
+import { getCollection } from "astro:content";
+import slugify from "../helpers/slugify";
+import { Image } from "astro:assets";
+const allProjects = await getCollection("people");
+---
+
+<div class="project-grid">
+  {
+    allProjects.map((project) => {
+      return (
+        <article class="project-card">
+          <Image
+            widths={[600, 1200]}
+            class="project-image"
+            src={project.data.thumbnail.src}
+            alt=""
+          />
+          <a href="">{project.data.title}</a>
+          <p>{project.data.name}</p>
+        </article>
+      );
+    })
+  }
+</div>
+
+<style>
+  .project-grid {
+    display: flex;
+    max-width: 1300px;
+    gap: 80px;
+  }
+  .project-card {
+    max-width: 600px;
+  }
+  .project-image {
+    width: 100%;
+    height: auto;
+  }
+</style>

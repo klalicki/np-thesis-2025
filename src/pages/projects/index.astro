@@ -1,17 +1,12 @@
 ---
 import { getCollection } from "astro:content";
 import slugify from "../../helpers/slugify";
-
+import ProjectLister from "../../components/ProjectLister.astro";
 const people = await getCollection("people");
+import Layout from "../../layouts/Layout.astro";
 ---
 
-<h1>Projects</h1>
-{
-  people.map((person) => {
-    return (
-      <a href={"/projects/" + slugify(person.data.title) + "/"}>
-        {person.data.title}
-      </a>
-    );
-  })
-}
+<Layout>
+  <h1>Projects</h1>
+  <ProjectLister />
+</Layout>
