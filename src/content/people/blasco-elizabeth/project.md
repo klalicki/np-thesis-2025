@@ -5,9 +5,8 @@ location: Setauket, NY
 headshot: "headshot_1.jpg"
 headshotAlt: "headshot_2.jpg"
 portfolio: https://elizabethblasco.org
-bio: |
+bio: |Elizabeth is a graduating senior with an interest in branding and marketing, and a newfound interest in CAD and digital design. She loves music, movies, and spending time with her friends and family.
   
-
 title: "Graphic Content"
 thumbnail:
   src: "project_1.png"

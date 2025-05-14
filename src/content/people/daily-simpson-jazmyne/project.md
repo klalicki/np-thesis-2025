@@ -14,7 +14,7 @@ thumbnail:
   alt: "ArtSci: Kits for Curious Minds"
 images:
   - src: "project_2.png"
-    alt: "ArtSci: Kits for Curious Minds box kits"
+    alt: "ArtSci box kits"
     size: 2
   - src: "project_3.png"
     alt: "ArtSci cyanotype science box kit"

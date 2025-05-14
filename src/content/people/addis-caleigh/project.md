@@ -10,7 +10,7 @@ bio: |
 
 title: "The Art of Bookbinding"
 thumbnail:
-  src: "project-2.png"
+  src: "project-2.gif"
   alt: "Art of Bookbinding Title "
 images:
   - src: "project-3.png"

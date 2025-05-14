@@ -10,7 +10,7 @@ bio: |
 
 title: "The Color "Violet""
 thumbnail:
-  src: "project_1.png"
+  src: "project_1.gif"
   alt: "The Color "Violet" gif"
 images:
   - src: "project_2.png"

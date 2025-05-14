@@ -10,7 +10,7 @@ bio: |
 
 title: "Why TV Matters"
 thumbnail:
-  src: "project_1.gif"
+  src: "project_1.png"
   alt: "Why TV Matters"
 images:
   - src: "project_2.png"

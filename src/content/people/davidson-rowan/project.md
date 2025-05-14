@@ -17,7 +17,7 @@ images:
     alt: "demo reel image on T.V."
     size: 1
   - src: "project_3.png"
-    alt: ""Wish you were here!" Lost and Found image"
+    alt: ""Wish you were here!" Lost and Found poster"
     size: 1
 ---
 

@@ -10,7 +10,7 @@ bio: |
 
 title: "Highs, Lows & Who Knows?"
 thumbnail:
-  src: "project_1.gif"
+  src: "project_1.png"
   alt: "Highs, Lows & Who Knows?"
 images:
   - src: "project_2.png"

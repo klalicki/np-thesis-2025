@@ -10,7 +10,7 @@ bio: |
 
 title: "Mend What Matters"
 thumbnail:
-  src: "project_1.png"
+  src: "project_1.gif"
   alt: "Mend What Matters gif"
 images:
   - src: "project_2.png"
