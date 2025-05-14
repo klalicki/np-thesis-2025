@@ -11,19 +11,19 @@ bio: |
 title: "The Color "Violet""
 thumbnail:
   src: "project_1.png"
-  alt: "Thumbnail Description"
+  alt: "The Color "Violet" gif"
 images:
   - src: "project_2.png"
-    alt: ""
+    alt: "The Color "Violet" illustration"
     size: 2
   - src: "project_3.png"
-    alt: ""
+    alt: "The Color "Violet" website on laptop"
     size: 1
   - src: "project_4.png"
-    alt: ""
+    alt: "The Color "Violet" design"
     size: 1
   - src: "project_5.png"
-    alt: ""
+    alt: "The Color "Violet" design"
     size: 2
 ---
 
