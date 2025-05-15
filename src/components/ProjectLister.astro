@@ -19,7 +19,9 @@ const allProjects = await getCollection("people");
             src={project.data.thumbnail.src}
             alt=""
           />
-          <a href={projectUrl}>{project.data.title}</a>
+          <a class="project-title" href={projectUrl}>
+            {project.data.title}
+          </a>
           <p class="person-name">{project.data.name}</p>
         </article>
       );
@@ -30,7 +32,7 @@ const allProjects = await getCollection("people");
 <style>
   .project-grid {
     max-width: var(--size-page-width);
-    width: 100%;
+    width: calc(100% - 2 * var(--size-page-margin));
     display: grid;
     align-items: top;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -47,5 +49,9 @@ const allProjects = await getCollection("people");
   .person-name {
     font-size: 1.25rem;
     font-family: "Sligoil", serif;
+  }
+  .project-title {
+    font-family: "Compagnon", monospace;
+    text-decoration: none;
   }
 </style>

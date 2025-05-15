@@ -20,7 +20,7 @@ if (!entry) {
 const { Content } = await render(entry);
 ---
 
-<Layout>
+<Layout pageTitle={entry.data.title}>
   <div class="project-sidebar">
     <h2>Project Sidebar</h2>
     <p>Project sidebar content</p>

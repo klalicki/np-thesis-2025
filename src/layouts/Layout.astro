@@ -1,4 +1,9 @@
 ---
+interface Props {
+  pageTitle?: string;
+}
+const { props } = Astro;
+
 import "@acab/reset.css";
 import Nav from "../sections/Nav.astro";
 import Footer from "../sections/Footer.astro";
@@ -13,9 +18,10 @@ import bgRibbon from "../assets/pagebg.svg";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
-    <link rel="stylesheet" href="https://use.typekit.net/jhu1ufw.css" />
-  </head>
+    <title>{props.pageTitle || ""} | SUNY New Paltz</title>
+    <link rel="stylesheet" href="https://use.typekit.net/jhu1ufw.css" /></head
+  >
+
   <body>
     <Nav />
     <main>
@@ -31,6 +37,13 @@ import bgRibbon from "../assets/pagebg.svg";
     src:
       url("/fonts/sligoil/Sligoil-Micro.woff2") format("woff2"),
       url("/fonts/sligoil/Sligoil-Micro.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Compagnon";
+    src:
+      url("/fonts/compagnon/Compagnon-Roman.woff2") format("woff2"),
+      url("/fonts/compagnon/Compagnon-Roman.woff") format("woff");
   }
 
   :root {
