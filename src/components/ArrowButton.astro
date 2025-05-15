@@ -1,0 +1,30 @@
+---
+interface Props {
+  href: string;
+  color: string;
+  direction?: "left" | "right";
+}
+import { FontAwesomeIcon } from "astro-fontawesome";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+const { props } = Astro;
+
+const icon = props.direction === "left" ? faArrowLeft : faArrowRight;
+---
+
+<a href={props.href} class="btn" style=`--color-btn:var(--color-${props.color})`
+  ><FontAwesomeIcon icon={icon} /><slot /></a
+>
+
+<style>
+  .btn {
+    border: 2px solid var(--color-btn);
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+  }
+  .btn:hover {
+    background-color: var(--color-btn);
+    color: var(--color-background);
+  }
+</style>

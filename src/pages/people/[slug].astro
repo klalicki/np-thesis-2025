@@ -6,6 +6,7 @@ import Layout from "../../layouts/Layout.astro";
 import Button from "../../components/Button.astro";
 import ButtonGroup from "../../components/ButtonGroup.astro";
 import slugify from "../../helpers/slugify";
+import ArrowButton from "../../components/ArrowButton.astro";
 export const getStaticPaths = async () => {
   const allPeople = await getCollection("people");
   return allPeople.map((item) => ({
@@ -43,6 +44,7 @@ if (!entry) {
         </div>
 
         <p class="bio-text">{entry.data.bio}</p>
+        <ArrowButton href="" color="accent-a">asdasd</ArrowButton>
       </div>
 
       <ButtonGroup>
