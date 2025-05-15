@@ -1,6 +1,7 @@
 ---
 import type { GetStaticPaths } from "astro";
 import { getCollection, getEntry } from "astro:content";
+import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 export const getStaticPaths = async () => {
   const allPeople = await getCollection("people");
@@ -10,11 +11,22 @@ export const getStaticPaths = async () => {
 };
 const slug = Astro.params.slug;
 const entry = await getEntry("people", slug);
+if (!entry) {
+  throw new Error(`Person not found for slug: ${slug}`);
+}
 ---
 
 <Layout>
-  <h1>Person</h1>
-  <code>
-    {JSON.stringify(entry)}
-  </code>
+  <Image class="bio-image" src={entry.data.headshot} alt={entry.data.name} />
+  <h1 class="star-after">{entry.data.name}</h1>
+  <p>
+    <span class="visually-hidden">Pronouns:</span>
+    <span class="star-before">{entry.data.pronouns}</span>
+  </p>
+  <p>
+    <span class="visually-hidden">Hometown:</span>
+    <span class="star-before">{entry.data.location}</span>
+  </p>
 </Layout>
+
+<style></style>
