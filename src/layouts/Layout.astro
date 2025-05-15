@@ -61,12 +61,27 @@ import bgRibbon from "../assets/bg-ribbon.png";
     text-decoration: inherit;
   }
 
-  .star-after::after {
+  .star-b::after {
     content: "* ";
     position: absolute;
     right: 0;
     text-decoration: inherit;
   }
+
+  .star-before {
+    position: relative;
+    display: inline-block;
+    padding-left: 0.5em;
+    text-decoration: inherit;
+  }
+
+  .star-before::before {
+    content: " *";
+    position: absolute;
+    left: 0;
+    text-decoration: inherit;
+  }
+
   main {
     display: flex;
     flex-direction: column;
