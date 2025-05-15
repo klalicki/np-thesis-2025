@@ -7,6 +7,8 @@ import Button from "../../components/Button.astro";
 import ButtonGroup from "../../components/ButtonGroup.astro";
 import slugify from "../../helpers/slugify";
 import ArrowButton from "../../components/ArrowButton.astro";
+import { getPrevNext } from "../../helpers/getPrevNext";
+
 export const getStaticPaths = async () => {
   const allPeople = await getCollection("people");
   return allPeople.map((item) => ({
@@ -14,7 +16,14 @@ export const getStaticPaths = async () => {
   }));
 };
 const slug = Astro.params.slug;
+
 const entry = await getEntry("people", slug);
+
+const { prev, next } = await getPrevNext(slug);
+
+console.log("prev", prev);
+console.log("next", next);
+
 if (!entry) {
   throw new Error(`Person not found for slug: ${slug}`);
 }
