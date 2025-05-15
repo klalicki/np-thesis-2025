@@ -47,6 +47,7 @@ const firstName = names.join(" ");
   </div>
   <div class="project-main-wrapper">
     <div class="project-main">
+      <Image alt={entry.data.thumbnail.alt} src={entry.data.thumbnail.src} />
       <h1 class="project-title">{entry.data.title}</h1>
       <div class="project-content">
         <Content />
