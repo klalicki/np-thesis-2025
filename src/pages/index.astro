@@ -33,7 +33,7 @@ const allPeople = await getCollection("people");
     height: 85vh;
   }
   .welcome-title {
-    font-size: 85px;
+    font-size: clamp(70px, 10vw, 200px);
     font-weight: 400;
     display: flex;
     flex-direction: column;
@@ -57,7 +57,7 @@ const allPeople = await getCollection("people");
   }
   .welcome-year {
     font-weight: 400;
-    font-size: 55px;
+    font-size: 0.65em;
     letter-spacing: -1%;
   }
 </style>
