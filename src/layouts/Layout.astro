@@ -1,5 +1,7 @@
 ---
 import "@acab/reset.css";
+import Nav from "../sections/Nav.astro";
+import Footer from "../sections/Footer.astro";
 ---
 
 <!doctype html>
@@ -13,7 +15,9 @@ import "@acab/reset.css";
     <link rel="stylesheet" href="https://use.typekit.net/jhu1ufw.css" />
   </head>
   <body>
+    <Nav />
     <slot />
+    <Footer />
   </body>
 </html>
 <style is:global>
@@ -25,7 +29,7 @@ import "@acab/reset.css";
   }
 
   :root {
-    --color-accent-1:           
+    --color-accent-1:            
 
   ;
     p {
