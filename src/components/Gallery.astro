@@ -19,18 +19,20 @@ import { Image } from "astro:assets";
 
 <style>
   .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600, 1fr));
+    gap: 2rem;
     position: relative;
   }
   .gallery-image {
     height: auto;
   }
-  .gallery-image-1 {
-    width: 400px;
-  }
-  .gallery-image-2 {
-    width: 800px;
+  @media (min-width: 1200px) {
+    .gallery-image-1 {
+      grid-column: span 1;
+    }
+    .gallery-image-2 {
+      grid-column: span 2;
+    }
   }
 </style>
