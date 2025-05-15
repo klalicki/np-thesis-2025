@@ -61,7 +61,6 @@ import bgRibbon from "../assets/pagebg.svg";
   }
 
   * {
-    font-family: "Sligoil", sans-serif;
   }
   html {
     font-size: 16px;
@@ -106,9 +105,11 @@ import bgRibbon from "../assets/pagebg.svg";
     position: absolute;
     top: 0;
     right: 0;
-    width: 80vw;
+    width: 100vw;
     height: 100%;
     object-fit: cover;
+    transform: scaleX(-1);
     z-index: -1;
+    opacity: 0.5;
   }
 </style>
