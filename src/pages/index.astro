@@ -10,18 +10,29 @@ const allPeople = await getCollection("people");
 ---
 
 <Layout>
-  <h2>People</h2>
-  <p>{JSON.stringify(allPeople)}</p>
-  <h2>Projects</h2>
-  {
-    allPeople.map((item) => {
-      const contents = item.rendered?.html.split("\n<hr>\n");
-      return (
-        <div>
-          {contents[0] || ""}
-          <Image src={item.data.thumbnail.src} alt={"hi"} />;
-        </div>
-      );
-    })
-  }
+  <section class="welcome">
+    <h1 class="welcome-title">
+      <span class="star-after"> Design </span> Show <span class="welcome-year"
+        >2025</span
+      >
+    </h1>
+  </section>
 </Layout>
+
+<style>
+  .welcome {
+  }
+  .welcome-title {
+    font-size: 85px;
+  }
+  .star-after{
+    position: relative;
+    margin-right: .5em;
+  }
+  .star-after::after{
+    content: "* ";
+    position:absolute;
+    right:0;
+    
+ 
+</style>
