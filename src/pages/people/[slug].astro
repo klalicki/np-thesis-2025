@@ -51,9 +51,13 @@ if (!entry) {
         <Button href={"/projects/" + slugify(entry.data.title)} color="accent-a"
           ><span class="star-after">Thesis Project</span></Button
         >
-        <Button href={entry.data.portfolio} color="accent-c"
-          ><span class="star-after">Portfolio Website</span></Button
-        >
+        {
+          entry.data.portfolio && (
+            <Button href={entry.data.portfolio} color="accent-c">
+              <span class="star-after">Portfolio Website</span>
+            </Button>
+          )
+        }
       </ButtonGroup>
     </div>
   </div>
