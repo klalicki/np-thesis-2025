@@ -1,15 +1,14 @@
 ---
 import { Image } from "astro:assets";
-import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
 import { getCollection, getEntry } from "astro:content";
 const allPeople = await getCollection("people");
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import PeopleMarquee from "../components/PeopleMarquee.astro";
+import ProjectLister from "../components/ProjectLister.astro";
 ---
 
 <Layout>
+  <PeopleMarquee />
   <section class="welcome">
     <div class="title-box">
       <h1 class="welcome-title">
@@ -22,6 +21,8 @@ const allPeople = await getCollection("people");
       </h1>
     </div>
   </section>
+  <PeopleMarquee />
+  <ProjectLister />
 </Layout>
 
 <style>

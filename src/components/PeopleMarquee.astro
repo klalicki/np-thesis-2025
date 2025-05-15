@@ -1,0 +1,35 @@
+---
+import { getCollection } from "astro:content";
+
+const allPeople = await getCollection("people");
+
+const people: String[] = allPeople.map((person) => {
+  return person.data.name;
+});
+---
+
+<div class="people-marquee-container">
+  <p class="people-marquee">
+    {
+      people.map((person) => {
+        return <span>{person}</span>;
+      })
+    }
+  </p>
+</div>
+
+<style>
+  .people-marquee-container {
+    padding: 1rem 0;
+    background-color: var(--color-background);
+  }
+
+  .people-marquee {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    white-space: nowrap;
+    gap: 1.5rem;
+    color: var(--color-accent-a);
+  }
+</style>
