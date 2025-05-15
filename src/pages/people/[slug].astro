@@ -20,26 +20,44 @@ if (!entry) {
 ---
 
 <Layout>
-  <Image class="bio-image" src={entry.data.headshot} alt={entry.data.name} />
-  <h1 class="star-after">{entry.data.name}</h1>
-  <p>
-    <span class="visually-hidden">Pronouns:</span>
-    <span class="star-before">{entry.data.pronouns}</span>
-  </p>
-  <p>
-    <span class="visually-hidden">Hometown:</span>
-    <span class="star-before">{entry.data.location}</span>
-  </p>
-  <p>{entry.data.bio}</p>
+  <div class="bio-container">
+    <div class="bio-image-wrapper">
+      <Image
+        class="bio-image"
+        src={entry.data.headshot}
+        alt={entry.data.name}
+      />
+    </div>
+    <div class="bio-text-wrapper">
+      <h1 class="star-after">{entry.data.name}</h1>
+      <p>
+        <span class="visually-hidden">Pronouns:</span>
+        <span class="star-before">{entry.data.pronouns}</span>
+      </p>
+      <p>
+        <span class="visually-hidden">Hometown:</span>
+        <span class="star-before">{entry.data.location}</span>
+      </p>
+      <p>{entry.data.bio}</p>
 
-  <ButtonGroup>
-    <Button href={"/projects/" + slugify(entry.data.title)} color="accent-a"
-      ><span class="star-after">Thesis Project</span></Button
-    >
-    <Button href={entry.data.portfolio} color="accent-c"
-      ><span class="star-after">Portfolio Website</span></Button
-    >
-  </ButtonGroup>
+      <ButtonGroup>
+        <Button href={"/projects/" + slugify(entry.data.title)} color="accent-a"
+          ><span class="star-after">Thesis Project</span></Button
+        >
+        <Button href={entry.data.portfolio} color="accent-c"
+          ><span class="star-after">Portfolio Website</span></Button
+        >
+      </ButtonGroup>
+    </div>
+  </div>
 </Layout>
 
-<style></style>
+<style>
+  .bio-container {
+    display: flex;
+    flex-direction: row;
+    max-width: var(--size-page-width);
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+</style>
