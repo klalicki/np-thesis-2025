@@ -28,17 +28,22 @@ if (!entry) {
         alt={entry.data.name}
       />
     </div>
-    <div class="bio-text-wrapper">
-      <h1 class="star-after">{entry.data.name}</h1>
-      <p>
-        <span class="visually-hidden">Pronouns:</span>
-        <span class="star-before">{entry.data.pronouns}</span>
-      </p>
-      <p>
-        <span class="visually-hidden">Hometown:</span>
-        <span class="star-before">{entry.data.location}</span>
-      </p>
-      <p>{entry.data.bio}</p>
+    <div class="bio-content-wrapper">
+      <div class="bio-text-wrapper">
+        <h1 class="star-after">{entry.data.name}</h1>
+        <div class="bio-info-group">
+          <p>
+            <span class="visually-hidden">Pronouns:</span>
+            <span class="star-before">{entry.data.pronouns}</span>
+          </p>
+          <p>
+            <span class="visually-hidden">Hometown:</span>
+            <span class="star-before">{entry.data.location}</span>
+          </p>
+        </div>
+
+        <p class="bio-text">{entry.data.bio}</p>
+      </div>
 
       <ButtonGroup>
         <Button href={"/projects/" + slugify(entry.data.title)} color="accent-a"
@@ -58,5 +63,28 @@ if (!entry) {
     flex-direction: row;
     max-width: var(--size-page-width);
     margin: 0 var(--size-page-margin);
+    gap: var(--size-page-margin);
+  }
+
+  .bio-image-wrapper {
+    max-width: 450px;
+  }
+  .bio-text {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    padding-left: 2rem;
+    margin-top: 2rem;
+  }
+  .bio-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--size-page-margin);
+    padding: 2rem 0;
+  }
+  .bio-info-group {
+    line-height: 1;
+    font-size: 1.25rem;
+    margin-top: 2rem;
   }
 </style>
