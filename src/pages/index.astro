@@ -41,19 +41,9 @@ const allPeople = await getCollection("people");
   .second-line {
     display: inline-block;
   }
-  .star-after {
-    position: relative;
-    display: inline-block;
-    padding-right: 0.5em;
-  }
   .narrow-space {
     display: inline-block;
     width: 0.35em;
-  }
-  .star-after::after {
-    content: "* ";
-    position: absolute;
-    right: 0;
   }
   .welcome-year {
     font-weight: 400;

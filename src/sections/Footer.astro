@@ -5,7 +5,11 @@ import footerImg from "../assets/footer-img.png";
 
 <footer>
   <nav class="footer-nav">
-    <div class="nav-left"><a href="/">SUNY New Paltz Design Show* 2025</a></div>
+    <div class="nav-left">
+      <a href="/"
+        >SUNY New Paltz<br />Design <span class="star-after">Show</span> 2025</a
+      >
+    </div>
     <div class="nav-right">
       <a href="/about">About</a><a href="/people">Designers</a><a
         href="https://instagram.com/npzdesign">Instagram</a
@@ -14,16 +18,25 @@ import footerImg from "../assets/footer-img.png";
   </nav>
   <Image src={footerImg} alt="" widths={[400, 800, 1600]} />
   <style>
+    footer {
+      border-top: 1px solid var(--color-accent-a);
+    }
     .footer-nav {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
       gap: 2rem;
+      padding: 2rem 1rem;
+      text-align: center;
     }
     .nav-right {
       display: flex;
       gap: 1rem;
+    }
+
+    .footer-nav a {
+      font-size: 1.25rem;
     }
   </style>
 </footer>

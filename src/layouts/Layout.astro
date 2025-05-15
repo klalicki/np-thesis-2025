@@ -30,6 +30,7 @@ import Footer from "../sections/Footer.astro";
 
   :root {
     --color-background: #100d24;
+    --color-accent-a: #c1fd00;
   }
   p {
     font-family: "aktiv-grotesk", sans-serif;
@@ -43,5 +44,19 @@ import Footer from "../sections/Footer.astro";
   html {
     font-size: 16px;
     background-color: var(--color-background);
+  }
+
+  .star-after {
+    position: relative;
+    display: inline-block;
+    padding-right: 0.5em;
+    text-decoration: inherit;
+  }
+
+  .star-after::after {
+    content: "* ";
+    position: absolute;
+    right: 0;
+    text-decoration: inherit;
   }
 </style>
