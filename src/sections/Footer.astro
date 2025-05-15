@@ -11,24 +11,38 @@ import footerImg from "../assets/footer-img.png";
       >
     </div>
     <div class="nav-right">
-      <a href="/about">About</a><a href="/people">Designers</a><a
-        href="https://instagram.com/npzdesign">Instagram</a
-      ><a href=""></a>
+      <a class="star-after" href="/about">About</a><a
+        class="star-after"
+        href="/people">Designers</a
+      ><a class="star-after" href="https://instagram.com/npzdesign">Instagram</a
+      >
     </div>
   </nav>
-  <Image src={footerImg} alt="" widths={[400, 800, 1600]} />
+  <Image
+    class={"footer-img"}
+    src={footerImg}
+    alt=""
+    widths={[400, 800, 1600]}
+  />
   <style>
     footer {
       border-top: 1px solid var(--color-accent-a);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     .footer-nav {
       display: flex;
       flex-wrap: wrap;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       gap: 2rem;
       padding: 2rem 1rem;
       text-align: center;
+      width: 100%;
+      max-width: var(--size-page-width);
     }
     .nav-right {
       display: flex;
@@ -36,7 +50,26 @@ import footerImg from "../assets/footer-img.png";
     }
 
     .footer-nav a {
-      font-size: 1.25rem;
+      font-size: clamp(1.25rem, 2vw, 2rem);
+      text-decoration: none;
+    }
+
+    .footer-img {
+      max-height: 300px;
+      object-fit: cover;
+    }
+
+    @media screen and (min-width: 620px) {
+      .footer-nav {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .nav-left {
+        text-align: left;
+      }
+      .nav-right {
+        text-align: right;
+      }
     }
   </style>
 </footer>
