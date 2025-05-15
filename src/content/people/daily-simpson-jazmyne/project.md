@@ -6,7 +6,7 @@ headshot: "headshot_1.jpg"
 headshotAlt: "headshot_2.jpg"
 portfolio: https://jazmynedailysimpson.com
 bio: |
-  Jazmyne Daily-Simpson is a graphic design BFA and Art History minor with a passion for branding and print design. She loves adding hand drawn illustrations and techniques to her work and can usually be found in the labs scanning anything and everything. When she’s not designing, Jazmyne enjoys running, knitting, and visiting art museums. 
+  Jazmyne Daily-Simpson is a graphic design BFA and Art History minor with a passion for branding and print design. She loves adding hand drawn illustrations and techniques to her work and can usually be found in the labs scanning anything and everything. When she’s not designing, Jazmyne enjoys running, knitting, and visiting art museums.
 
 title: "ArtSci: Kits for Curious Minds"
 thumbnail:
@@ -20,7 +20,7 @@ images:
     alt: "ArtSci cyanotype science box kit"
     size: 1
   - src: "project_4.png"
-    alt: ""How""What""Why"illustrations"
+    alt: '"How" "What" "Why" illustrations'
     size: 1
 ---
 

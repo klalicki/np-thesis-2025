@@ -2,11 +2,11 @@
 name: Madison Tripi
 pronouns: she/her
 location: Massapequa, NY
-headshot: "headshot-1.jpg"
-headshotAlt: "headshot-2.jpg"
+headshot: "headshot_1.jpg"
+headshotAlt: "headshot_2.jpg"
 portfolio: https://madisontripi.com
 bio: |
-  Madison is a graduating senior originally from Massapequa, NY. Her design specialties include branding, ideation, and advertising. She takes her inspiration from scanning antique stores, scrolling on Pinterest and trying her best to think outside the box. In her spare time Madison enjoys going to the gym for her mental and physical well-being as well as taking care of dogs and cats for neighboring clients. 
+  Madison is a graduating senior originally from Massapequa, NY. Her design specialties include branding, ideation, and advertising. She takes her inspiration from scanning antique stores, scrolling on Pinterest and trying her best to think outside the box. In her spare time Madison enjoys going to the gym for her mental and physical well-being as well as taking care of dogs and cats for neighboring clients.
 
 title: "Highs, Lows & Who Knows?"
 thumbnail:

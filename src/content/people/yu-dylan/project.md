@@ -8,22 +8,22 @@ portfolio: https://yudylan.com
 bio: |
   Dylan is a graduating senior from Queens, NY. Their design specialties include user experience, motion graphics, and typography, all of which make an appearance in their thesis project. They take inspiration from their love of music and can't finish a work session without playing a TheWeeknd song or two. In their spare time Dylan enjoys playing video games and watching TV.
 
-title: "The Color "Violet""
+title: 'The Color "Violet"'
 thumbnail:
   src: "project_1.gif"
-  alt: "The Color "Violet" gif"
+  alt: 'The Color "Violet" gif'
 images:
   - src: "project_2.png"
-    alt: "The Color "Violet" illustration"
+    alt: 'The Color "Violet" illustration'
     size: 2
   - src: "project_3.png"
-    alt: "The Color "Violet" website on laptop"
+    alt: 'The Color "Violet" website on laptop'
     size: 1
   - src: "project_4.png"
-    alt: "The Color "Violet" design"
+    alt: 'The Color "Violet" design'
     size: 1
   - src: "project_5.png"
-    alt: "The Color "Violet" design"
+    alt: 'The Color "Violet" design'
     size: 2
 ---
 

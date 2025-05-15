@@ -2,22 +2,22 @@
 name: Rowan Davidson
 pronouns: she/her
 location: Glens Falls, NY
-headshot: "headshot-1.jpg"
-headshotAlt: "headshot-2.jpg"
+headshot: "headshot_1.jpg"
+headshotAlt: "headshot_2.jpg"
 portfolio: https://www.rowandavidsonart.com/
 bio: |
-  Rowan Davidson is a senior from Glens Falls, NY. Her design specialties include branding, ideation, and web design, all of which can be seen in her thesis project. She draws inspiration from her past and present experiences, and always keeps an eye out for media to collage. In her spare time, Rowan enjoys playing video games with friends and going on long walks with family. 
+  Rowan Davidson is a senior from Glens Falls, NY. Her design specialties include branding, ideation, and web design, all of which can be seen in her thesis project. She draws inspiration from her past and present experiences, and always keeps an eye out for media to collage. In her spare time, Rowan enjoys playing video games with friends and going on long walks with family.
 
 title: "Lost and Found"
 thumbnail:
   src: "project_1.gif"
   alt: "Lost & Found gif"
 images:
-  - src: "project_2.png"
+  - src: "project_2.jpg"
     alt: "demo reel image on T.V."
     size: 1
-  - src: "project_3.png"
-    alt: ""Wish you were here!" Lost and Found poster"
+  - src: "project_3.jpg"
+    alt: '"Wish you were here!" Lost and Found poster'
     size: 1
 ---
 

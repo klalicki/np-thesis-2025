@@ -2,8 +2,8 @@
 name: Leigh Joiner
 pronouns: they/them
 location: Queensbury, NY
-headshot: "headshot-1.jpg"
-headshotAlt: "headshot-2.jpg"
+headshot: "headshot_1.jpg"
+headshotAlt: "headshot_2.jpg"
 portfolio: https://www.behance.net/leighjoiner
 bio: |
   Leigh is a graduating senior whose design specialties include branding and character design, which can be seen in their thesis project. They take inspiration from their love of video games and enjoy listening to Dark Souls boss music to motivate them while they work. In their spare time, Leigh writes fictional stories, bakes sweet treats, and doodles in the margins.
@@ -14,7 +14,7 @@ thumbnail:
   alt: "<body>: an inclusive avatar creator gif"
 images:
   - src: "project_2.png"
-    alt: "<body>: an inclusive avatar creator "Most character creators-even big ticket games like the Sims neglect to accomodate to disabled player to grant them the right to see representations of themselves in the games they love. With the help of Shauna Keating and Kristoff Lalicki, this website can give a glimpse into what representation can be""
+    alt: "User interface of <body>: an inclusive avatar creator, showing the ability to customize all aspects of an avatar"
     size: 2
   - src: "project_3.png"
     alt: "<body>: an inclusive avatar creator created avatars "

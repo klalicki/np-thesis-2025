@@ -18,7 +18,7 @@ const peopleCollection = defineCollection({
       headshot: image(),
       headshotAlt: image(),
       bio: z.string(),
-      portfolio: z.string(),
+      portfolio: z.optional(z.string()),
       title: z.string(),
       thumbnail: z.object({
         alt: z.string(),
