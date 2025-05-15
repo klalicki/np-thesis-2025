@@ -1,3 +1,8 @@
+---
+import { Image } from "astro:assets";
+import footerImg from "../assets/footer-img.png";
+---
+
 <footer>
   <nav class="footer-nav">
     <div class="nav-left"><a href="/">SUNY New Paltz Design Show* 2025</a></div>
@@ -7,18 +12,18 @@
       ><a href=""></a>
     </div>
   </nav>
-  Image
+  <Image src={footerImg} alt="" />
+  <style>
+    .footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+    .nav-right {
+      display: flex;
+      gap: 1rem;
+    }
+  </style>
 </footer>
-<style>
-  .footer-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-  }
-  .nav-right {
-    display: flex;
-    gap: 1rem;
-  }
-</style>
