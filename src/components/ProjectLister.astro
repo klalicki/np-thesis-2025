@@ -29,9 +29,11 @@ const allProjects = await getCollection("people");
 
 <style>
   .project-grid {
-    display: flex;
-    max-width: 1300px;
-    gap: 80px;
+    max-width: var(--size-page-width);
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 2rem;
   }
   .project-card {
     max-width: 600px;

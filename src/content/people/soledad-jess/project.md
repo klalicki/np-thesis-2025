@@ -10,7 +10,7 @@ bio: |
 
 title: "I ❤︎ NEON"
 thumbnail:
-  src: "project_1.gif"
+  src: "project_1.webp"
   alt: "I ❤︎ NEON a journal by Jess Soledad gif"
 images:
   - src: "project_2.png"
