@@ -14,7 +14,7 @@ const allProjects = await getCollection("people");
       return (
         <article class="project-card">
           <Image
-            widths={[600, 1200]}
+            widths={[600]}
             class="project-image"
             src={project.data.thumbnail.src}
             alt=""
@@ -31,7 +31,7 @@ const allProjects = await getCollection("people");
   .project-grid {
     max-width: var(--size-page-width);
     display: grid;
-    align-items: center;
+    align-items: top;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-gap: 2rem;
   }
