@@ -26,41 +26,43 @@ const firstName = names.join(" ");
 ---
 
 <Layout pageTitle={entry.data.title}>
-  <div class="project-main-wrapper">
-    <div class="project-main">
-      <Image alt={entry.data.thumbnail.alt} src={entry.data.thumbnail.src} />
-      <h1 class="project-title">{entry.data.title}</h1>
-      <div class="project-content">
-        <Content />
-      </div>
+  <div class="project-page-wrapper">
+    <main class="project-main-wrapper">
+      <div class="project-main">
+        <Image alt={entry.data.thumbnail.alt} src={entry.data.thumbnail.src} />
+        <h1 class="project-title">{entry.data.title}</h1>
+        <div class="project-content">
+          <Content />
+        </div>
 
-      <Gallery images={entry.data.images} />
-    </div>
-  </div>
-  <div class="project-sidebar">
-    <Image src={entry.data.headshot} alt={entry.data.name} />
-    <h2 class="person-name">
-      {firstName}
-      <span class="star-after">{lastName}</span>
-    </h2>
-    <div class="button-group">
-      <Button color="accent-c" href={`/people/${entry.id}`}
-        >About <span class="star-after">Me</span></Button
-      >
-      {
-        entry.data.portfolio && (
-          <Button href={entry.data.portfolio} color="accent-b">
-            Portfolio <span class="star-after">Website</span>
-          </Button>
-        )
-      }
-    </div>
+        <Gallery images={entry.data.images} />
+      </div>
+    </main>
+    <aside class="project-sidebar">
+      <Image src={entry.data.headshot} alt={entry.data.name} />
+      <h2 class="person-name">
+        {firstName}
+        <span class="star-after">{lastName}</span>
+      </h2>
+      <div class="button-group">
+        <Button color="accent-c" href={`/people/${entry.id}`}
+          >About <span class="star-after">Me</span></Button
+        >
+        {
+          entry.data.portfolio && (
+            <Button href={entry.data.portfolio} color="accent-b">
+              Portfolio <span class="star-after">Website</span>
+            </Button>
+          )
+        }
+      </div>
+    </aside>
   </div>
 </Layout>
 
 <style>
   .project-sidebar {
-    padding: 2rem;
+    padding: 0 2rem;
   }
   .person-name {
     font-size: 1.5rem;
@@ -89,7 +91,22 @@ const firstName = names.join(" ");
     font-family: "Sligoil", serif;
   }
 
+  .project-page-wrapper {
+    position: relative;
+  }
+
+  .project-main-wrapper,
+  .project-sidebar {
+    padding-top: var(--size-page-margin);
+    padding-bottom: var(--size-page-margin);
+  }
+
   @media screen and (min-width: 768px) {
+    .project-page-wrapper {
+      display: flex;
+      gap: 0rem;
+      overflow: visible;
+    }
     .project-title {
       font-size: 3rem;
       margin-top: 4rem;
@@ -102,14 +119,17 @@ const firstName = names.join(" ");
     }
     .project-sidebar {
       width: 300px;
-      position: fixed;
-      left: 0;
+      order: 1;
+      flex-grow: 0;
       top: 0;
-      padding: 1rem;
+      position: sticky;
+      align-self: flex-start;
     }
     .project-main-wrapper {
-      padding-left: 300px;
+      order: 2;
+      flex: 1;
     }
+
     .project-main {
       max-width: 1000px;
     }
