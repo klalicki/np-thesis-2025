@@ -10,8 +10,12 @@ import { Image } from "astro:assets";
       ><Image alt="Design Show Home" src={siteLogo} />
     </a>
     <div class="right-group">
-      <a href="/designers"><span class="star-after">Designers</span></a>
-      <a href="/about"><span class="star-after">About</span></a>
+      <a class="alternating-link" href="/designers"
+        ><span class="star-after">Designers</span></a
+      >
+      <a class="alternating-link" href="/about"
+        ><span class="star-after">About</span></a
+      >
     </div>
   </nav>
 </header>
@@ -35,7 +39,8 @@ import { Image } from "astro:assets";
     padding: 0.5rem;
     text-decoration: none;
   }
-  a:hover {
+  .nav-logo:hover,
+  .nav-logo:focus-visible {
     background-color: rgba(255, 255, 255, 0.2);
   }
   .nav-logo {

@@ -118,4 +118,18 @@ import { ClientRouter } from "astro:transitions";
     z-index: -1;
     opacity: 0.3;
   }
+
+  .alternating-link {
+    font-family: "Sligoil", serif;
+    --color-link-highlight: var(--color-accent-c);
+  }
+
+  .alternating-link:nth-of-type(even) {
+    --color-link-highlight: var(--color-accent-a);
+  }
+
+  .alternating-link:hover,
+  .alternating-link:focus-visible {
+    color: var(--color-link-highlight);
+  }
 </style>
