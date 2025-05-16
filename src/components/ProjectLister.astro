@@ -19,8 +19,11 @@ const allProjectsSorted = allProjects.sort((a, b) => {
         <article class="project-card">
           <Image
             transition:name={`thumb-${projectSlug}`}
-            widths={[600]}
+            transition:persist
+            width={1000}
+            quality={"mid"}
             class="project-image"
+            
             src={project.data.thumbnail.src}
             alt=""
           />
