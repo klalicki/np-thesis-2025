@@ -15,13 +15,15 @@ const people = await getCollection("people");
             class="people-card-image"
             src={person.data.headshot}
             alt={""}
+            width={330}
           />
           <Image
             class="people-card-image-alt"
             src={person.data.headshotAlt}
             alt={""}
+            width={330}
           />
-          <p class="people-card-name">{person.data.name}</p>
+          <p class="people-card-name star-after">{person.data.name}</p>
         </a>
       );
     })
@@ -56,7 +58,7 @@ const people = await getCollection("people");
     top: 0;
     opacity: 0;
   }
-  .people-card:hover,
+  .people-card:hover .people-card-image-alt,
   .people-card:focus-visible .people-card-image-alt {
     opacity: 1;
   }
@@ -65,5 +67,7 @@ const people = await getCollection("people");
     text-decoration: none;
     text-align: center;
     font-size: 1.5rem;
+    display: inline;
+    align-self: center;
   }
 </style>
