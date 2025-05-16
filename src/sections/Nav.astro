@@ -1,1 +1,42 @@
-NAV
+---
+import siteLogo from "../assets/site-logo.png";
+import Image from "astro/components/Image.astro";
+---
+
+<header>
+  <nav>
+    <a href="/" class="nav-logo"
+      ><Image alt="Design Show Home" src={siteLogo} />
+    </a>
+    <div class="right-group">
+      <a href="/people"><span class="star-after">Designers</span></a>
+      <a href="/about"><span class="star-after">About</span></a>
+    </div>
+  </nav>
+</header>
+
+<style>
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  .right-group {
+    display: flex;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    gap: 1em;
+  }
+  a {
+    display: block;
+    font-family: "Sligoil", serif;
+    padding: 0.5rem;
+    text-decoration: none;
+  }
+  a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .nav-logo {
+    width: clamp(150px, 30vw, 290px);
+  }
+</style>
