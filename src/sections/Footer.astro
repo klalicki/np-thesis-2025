@@ -40,11 +40,10 @@ import footerImg from "../assets/footer.svg";
       align-items: center;
       gap: 2rem;
       padding: 2rem 0rem;
-      margin: 0 var(--size-page-margin);
-
       text-align: center;
       width: 100%;
-      max-width: var(--size-page-width);
+      max-width: calc(var(--size-page-width) + 2 * var(--size-page-margin));
+      padding: var(--size-page-margin);
     }
     .nav-right {
       display: flex;
@@ -54,6 +53,7 @@ import footerImg from "../assets/footer.svg";
     .footer-nav a {
       font-size: clamp(1.25rem, 2vw, 2rem);
       text-decoration: none;
+      font-family: "Sligoil", serif;
     }
 
     .footer-img {
