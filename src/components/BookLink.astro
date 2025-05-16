@@ -1,0 +1,52 @@
+---
+import bookCover from "../assets/book-cover.png";
+import { Image } from "astro:assets";
+---
+
+<a href="/" class="book-link"
+  ><span class="book-link-text">View the PDF catalog!</span><Image
+    alt=""
+    src={bookCover}
+  /></a
+>
+<style>
+  .book-link {
+    --book-link-color: var(--color-background);
+    --book-link-text: white;
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+    bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: "Sligoil", serif;
+    text-decoration: none;
+  }
+  .book-link:hover,
+  .book-link:focus-visible {
+    --book-link-color: var(--color-accent-a);
+    --book-link-text: var(--color-background);
+  }
+
+  .book-link img {
+    height: 100%;
+    width: auto;
+    max-width: 200px;
+    object-fit: cover;
+    transform: rotate(10deg);
+  }
+  .book-link * {
+    outline: 10px solid var(--book-link-color);
+    background-color: var(--book-link-color);
+  }
+  .book-link-text {
+    transform: translateY(-50%);
+    position: relative;
+    right: -20px;
+    border-right: 20px solid var(--book-link-color);
+    font-weight: 600;
+    color: var(--book-link-text);
+    border-radius: 0.25rem;
+  }
+</style>

@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import footerImg from "../assets/footer.svg";
+import BookLink from "../components/BookLink.astro";
 ---
 
 <footer>
@@ -18,12 +19,16 @@ import footerImg from "../assets/footer.svg";
       >
     </div>
   </nav>
-  <Image
-    class={"footer-img"}
-    src={footerImg}
-    alt=""
-    widths={[400, 800, 1600]}
-  />
+  <div class="footer-img-container">
+    <Image
+      class={"footer-img"}
+      src={footerImg}
+      alt=""
+      widths={[400, 800, 1600]}
+    />
+    <BookLink />
+  </div>
+
   <style>
     footer {
       border-top: 1px solid var(--color-accent-a);
@@ -51,14 +56,29 @@ import footerImg from "../assets/footer.svg";
     }
 
     .footer-nav a {
-      font-size: clamp(1.25rem, 2vw, 2rem);
+      font-size: clamp(1.125rem, 2vw, 1.5rem);
       text-decoration: none;
       font-family: "Sligoil", serif;
+      --color-link-highlight: var(--color-accent-c);
+    }
+
+    .footer-nav a:nth-of-type(even),
+    .nav-left a {
+      --color-link-highlight: var(--color-accent-a);
+    }
+
+    .footer-nav a:hover,
+    .footer-nav a:focus-visible {
+      color: var(--color-link-highlight);
     }
 
     .footer-img {
       max-height: 300px;
       object-fit: cover;
+    }
+
+    .footer-img-container {
+      position: relative;
     }
 
     @media screen and (min-width: 620px) {
