@@ -39,22 +39,28 @@ const firstName = names.join(" ");
       </div>
     </main>
     <aside class="project-sidebar">
-      <Image src={entry.data.headshot} alt={entry.data.name} />
-      <h2 class="person-name">
-        {firstName}
-        <span class="star-after">{lastName}</span>
-      </h2>
-      <div class="button-group">
-        <Button color="accent-c" href={`/people/${entry.id}`}
-          >About <span class="star-after">Me</span></Button
-        >
-        {
-          entry.data.portfolio && (
-            <Button href={entry.data.portfolio} color="accent-b">
-              Portfolio <span class="star-after">Website</span>
-            </Button>
-          )
-        }
+      <Image
+        class="sidebar-img"
+        src={entry.data.headshot}
+        alt={entry.data.name}
+      />
+      <div class="sidebar-text-panel">
+        <h2 class="person-name">
+          {firstName}
+          <span class="star-after">{lastName}</span>
+        </h2>
+        <div class="button-group">
+          <Button compact color="accent-c" href={`/people/${entry.id}`}
+            >About <span class="star-after">Me</span></Button
+          >
+          {
+            entry.data.portfolio && (
+              <Button compact href={entry.data.portfolio} color="accent-b">
+                <span class="star-after">Portfolio</span>
+              </Button>
+            )
+          }
+        </div>
       </div>
     </aside>
   </div>
@@ -63,6 +69,14 @@ const firstName = names.join(" ");
 <style>
   .project-sidebar {
     padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .sidebar-img {
+    max-width: 144px;
+    height: auto;
+    align-self: center;
   }
   .person-name {
     font-size: 1.5rem;
@@ -95,12 +109,13 @@ const firstName = names.join(" ");
     position: relative;
   }
 
-  .project-main-wrapper,
-  .project-sidebar {
+  .project-main-wrapper {
     padding-top: var(--size-page-margin);
     padding-bottom: var(--size-page-margin);
   }
-
+  .project-sidebar {
+    padding-bottom: var(--size-page-margin);
+  }
   @media screen and (min-width: 768px) {
     .project-page-wrapper {
       display: flex;
@@ -124,10 +139,16 @@ const firstName = names.join(" ");
       top: 0;
       position: sticky;
       align-self: flex-start;
+      flex-direction: column;
+      padding-top: var(--size-page-margin);
     }
     .project-main-wrapper {
       order: 2;
       flex: 1;
+    }
+
+    .sidebar-img {
+      max-width: 100%;
     }
 
     .project-main {

@@ -2,12 +2,15 @@
 interface Props {
   href: string;
   color: string;
+  compact?: boolean;
 }
 const { props } = Astro;
 ---
 
-<a href={props.href} class="btn" style=`--color-btn:var(--color-${props.color})`
-  ><slot /></a
+<a
+  href={props.href}
+  class:list={["btn", props.compact && "btn-compact"]}
+  style=`--color-btn:var(--color-${props.color})`><slot /></a
 >
 
 <style>
@@ -18,6 +21,10 @@ const { props } = Astro;
     font-size: 1.25rem;
     text-decoration: none;
     text-align: center;
+    font-family: "Sligoil", serif;
+  }
+  .btn-compact {
+    padding: 0.25rem 0.5rem;
   }
   .btn:hover {
     background-color: var(--color-btn);
