@@ -76,15 +76,12 @@ if (!entry) {
 <style>
   .bio-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     max-width: var(--size-page-width);
     margin: 0 var(--size-page-margin);
     gap: var(--size-page-margin);
   }
 
-  .bio-image-wrapper {
-    max-width: 450px;
-  }
   .bio-name {
     font-family: "Sligoil", serif;
     font-weight: 400;
@@ -93,7 +90,6 @@ if (!entry) {
   .bio-text {
     font-size: 1.25rem;
     line-height: 1.6;
-    padding-left: 2rem;
     margin-top: 2rem;
   }
   .bio-content-wrapper {
@@ -110,5 +106,18 @@ if (!entry) {
   }
   .bio-info-group p {
     font-family: "Sligoil", serif;
+  }
+  @media screen and (min-width: 620px) {
+    .bio-container {
+      flex-direction: row;
+      margin: var(--size-page-margin) 0;
+    }
+    .bio-text {
+      padding-left: 2rem;
+      padding-right: 1rem;
+    }
+    .bio-image-wrapper {
+      max-width: 450px;
+    }
   }
 </style>
