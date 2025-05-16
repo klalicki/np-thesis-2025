@@ -29,7 +29,11 @@ const firstName = names.join(" ");
   <div class="project-page-wrapper">
     <main class="project-main-wrapper">
       <div class="project-main">
-        <Image alt={entry.data.thumbnail.alt} src={entry.data.thumbnail.src} />
+        <Image
+          transition:name={`thumb-${projectSlug}`}
+          alt={entry.data.thumbnail.alt}
+          src={entry.data.thumbnail.src}
+        />
         <h1 class="project-title">{entry.data.title}</h1>
         <div class="project-content">
           <Content />
@@ -43,6 +47,7 @@ const firstName = names.join(" ");
         class="sidebar-img"
         src={entry.data.headshot}
         alt={entry.data.name}
+        transition:name={`photo-${entry.id}`}
       />
       <div class="sidebar-text-panel">
         <h2 class="person-name">

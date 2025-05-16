@@ -8,6 +8,7 @@ import "@acab/reset.css";
 import Nav from "../sections/Nav.astro";
 import Footer from "../sections/Footer.astro";
 import bgRibbon from "../assets/pagebg.svg";
+import { ClientRouter } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -19,9 +20,8 @@ import bgRibbon from "../assets/pagebg.svg";
     <meta name="generator" content={Astro.generator} />
     <title>{props.pageTitle || ""} | SUNY New Paltz Design Show 2025</title>
     <link rel="stylesheet" href="https://use.typekit.net/jhu1ufw.css" />
-  </head>
-
-  <body>
+    <ClientRouter />
+  </head><body>
     <Nav />
     <main>
       <slot />
