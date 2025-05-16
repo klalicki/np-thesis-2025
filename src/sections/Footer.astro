@@ -7,15 +7,17 @@ import BookLink from "../components/BookLink.astro";
 <footer>
   <nav class="footer-nav">
     <div class="nav-left">
-      <a href="/"
+      <a href="/" class="rev-alternating-link"
         >SUNY New Paltz<br />Design <span class="star-after">Show</span> 2025</a
       >
     </div>
     <div class="nav-right">
-      <a class="star-after" href="/about">About</a><a
-        class="star-after"
+      <a class="star-after alternating-link" href="/about">About</a><a
+        class="star-after alternating-link"
         href="/designers">Designers</a
-      ><a class="star-after" href="https://instagram.com/npzdesign">Instagram</a
+      ><a
+        class="star-after alternating-link"
+        href="https://instagram.com/npzdesign">Instagram</a
       >
     </div>
   </nav>
@@ -59,17 +61,6 @@ import BookLink from "../components/BookLink.astro";
       font-size: clamp(1.125rem, 2vw, 1.5rem);
       text-decoration: none;
       font-family: "Sligoil", serif;
-      --color-link-highlight: var(--color-accent-c);
-    }
-
-    .footer-nav a:nth-of-type(even),
-    .nav-left a {
-      --color-link-highlight: var(--color-accent-a);
-    }
-
-    .footer-nav a:hover,
-    .footer-nav a:focus-visible {
-      color: var(--color-link-highlight);
     }
 
     .footer-img {

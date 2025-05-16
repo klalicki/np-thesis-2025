@@ -123,13 +123,21 @@ import { ClientRouter } from "astro:transitions";
     font-family: "Sligoil", serif;
     --color-link-highlight: var(--color-accent-c);
   }
-
+  .rev-alternating-link {
+    font-family: "Sligoil", serif;
+    --color-link-highlight: var(--color-accent-a);
+  }
   .alternating-link:nth-of-type(even) {
     --color-link-highlight: var(--color-accent-a);
   }
+  .rev-alternating-link:nth-of-type(even) {
+    --color-link-highlight: var(--color-accent-c);
+  }
 
   .alternating-link:hover,
-  .alternating-link:focus-visible {
+  .alternating-link:focus-visible,
+  .rev-alternating-link:hover,
+  .rev-alternating-link:focus-visible {
     color: var(--color-link-highlight);
   }
 </style>
