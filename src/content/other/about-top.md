@@ -1,4 +1,4 @@
-## May 3rd, 2025, 4pm–7pm Wooster Hall, 2nd Floor at SUNY New Paltz
+## May 3rd, 2025, 4pm–7pm <span aria-hidden class="strikeout">Wooster Hall, 2nd Floor</span> South Classroom Building at SUNY New Paltz
 
 The 2025 Design Show celebrates the work of graduating students from the MA in Digital Design & Fabrication and the BFA Graphic Design programs in the Department of Design at SUNY New Paltz.
 
@@ -13,4 +13,3 @@ The Digital Design & Fabrication (DDF) degree prepares students to utilize moder
 ## Thanks
 
 <p class="larger-text">We would like to recognize the individuals who have worked to make this year's design show & its promotion all possible.</>
-
