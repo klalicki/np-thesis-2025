@@ -15,13 +15,13 @@ const people = await getCollection("people");
             class="people-card-image"
             src={person.data.headshot}
             alt={""}
-            width={330}
+            width={600}
           />
           <Image
             class="people-card-image-alt"
             src={person.data.headshotAlt}
             alt={""}
-            width={330}
+            width={600}
           />
           <p class="people-card-name star-after">{person.data.name}</p>
         </a>
@@ -32,16 +32,15 @@ const people = await getCollection("people");
 
 <style>
   .people-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--size-page-margin);
+    max-width: var(--size-page-width);
+    padding: 4rem;
+    width: 100%;
   }
 
   .people-card {
-    flex-basis: 330px;
-    flex-grow: 0;
-    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     text-decoration: none;
@@ -49,7 +48,7 @@ const people = await getCollection("people");
   }
   .people-card-image,
   .people-card-image-alt {
-    width: auto;
+    width: 100%;
     height: auto;
   }
   .people-card-image-alt {
@@ -69,5 +68,12 @@ const people = await getCollection("people");
     font-size: 1.5rem;
     display: inline;
     align-self: center;
+  }
+
+  @media screen and (min-width: 700px) {
+    .people-list {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      padding: 2rem;
+    }
   }
 </style>
