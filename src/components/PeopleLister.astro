@@ -3,6 +3,11 @@ import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 
 const people = await getCollection("people");
+const peopleSorted = people.sort((a, b) => {
+  const aLast = a.data.name.split(" ").pop() || "";
+  const bLast = b.data.name.split(" ").pop() || "";
+  return aLast > bLast ? 1 : -1;
+});
 ---
 
 <div class="people-list">

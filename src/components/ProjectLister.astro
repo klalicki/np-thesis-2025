@@ -3,11 +3,16 @@ import { getCollection } from "astro:content";
 import slugify from "../helpers/slugify";
 import { Image } from "astro:assets";
 const allProjects = await getCollection("people");
+const allProjectsSorted = allProjects.sort((a, b) => {
+  const aLast = a.data.name.split(" ").pop() || "";
+  const bLast = b.data.name.split(" ").pop() || "";
+  return aLast > bLast ? 1 : -1;
+});
 ---
 
 <div class="project-grid">
   {
-    allProjects.map((project) => {
+    allProjectsSorted.map((project) => {
       console.log(project);
       const projectSlug = slugify(project.data.title);
       const projectUrl = `/projects/${projectSlug}/`;
