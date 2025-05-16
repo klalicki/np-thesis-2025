@@ -1,5 +1,60 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import AboutContent from "../content/other/about.md";
 ---
 
-<Layout pageTitle="About"> ABOUT PAGE </Layout>
+<Layout pageTitle="About">
+  <div class="about-page">
+    <h1 class="big-header">About</h1>
+    <AboutContent />
+  </div>
+</Layout>
+<style is:global>
+  .about-page h3,
+  .about-page h2 {
+    font-family: "Sligoil", serif;
+    font-weight: 400;
+  }
+
+  .about-page h2 {
+    position: relative;
+    text-decoration: inherit;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .about-page p {
+    font-family: "aktiv-grotesk", sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+  }
+  .about-page h2::before {
+    content: " *";
+    position: absolute;
+    left: -0.75em;
+    text-decoration: inherit;
+    color: red;
+  }
+
+  .about-page h3 {
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    color: var(--color-accent-a);
+  }
+  .about-page li {
+    font-family: "aktiv-grotesk", sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .about-page {
+    max-width: 670px;
+    margin-bottom: 4rem;
+    padding: 0 2rem;
+  }
+
+  .about-page .larger-text {
+    font-size: 1.5rem;
+  }
+</style>
