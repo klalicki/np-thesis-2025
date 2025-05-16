@@ -15,6 +15,7 @@ const people = await getCollection("people");
             src={person.data.headshot}
             alt={""}
             width={600}
+            transition:name={`photo-${person.id}`}
           />
           <Image
             class="people-card-image-alt"
