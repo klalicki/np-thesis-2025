@@ -5,12 +5,11 @@ import { Image } from "astro:assets";
 const people = await getCollection("people");
 ---
 
-<h1>People</h1>
 <div class="people-list">
   {
     people.map((person) => {
       return (
-        <a class="people-card" href={"/people/" + person.id + "/"}>
+        <a class="people-card" href={"/designers/" + person.id + "/"}>
           <Image
             class="people-card-image"
             src={person.data.headshot}
