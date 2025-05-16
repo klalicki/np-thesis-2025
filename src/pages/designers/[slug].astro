@@ -21,9 +21,6 @@ const entry = await getEntry("people", slug);
 
 const { prev, next } = await getPrevNext(slug);
 
-console.log("prev", prev);
-console.log("next", next);
-
 if (!entry) {
   throw new Error(`Person not found for slug: ${slug}`);
 }

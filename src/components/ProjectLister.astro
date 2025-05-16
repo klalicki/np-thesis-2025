@@ -13,7 +13,6 @@ const allProjectsSorted = allProjects.sort((a, b) => {
 <div class="project-grid">
   {
     allProjectsSorted.map((project) => {
-      console.log(project);
       const projectSlug = slugify(project.data.title);
       const projectUrl = `/projects/${projectSlug}/`;
       return (
