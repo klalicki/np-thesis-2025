@@ -1,12 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import AboutContent from "../content/other/about.md";
+import AboutContent from "../content/other/about-top.md";
+import BottomLeftContent from "../content/other/about-bottom-l.md";
+import BottomRightContent from "../content/other/about-bottom-r.md";
 ---
 
 <Layout pageTitle="About">
   <div class="about-page">
     <h1 class="big-header">About</h1>
-    <AboutContent />
+    <div class="top-section">
+      <AboutContent />
+    </div>
+    <div class="col-container">
+      <div class="col"><BottomLeftContent /></div>
+      <div class="col"><BottomRightContent /></div>
+    </div>
   </div>
 </Layout>
 <style is:global>
@@ -45,13 +53,24 @@ import AboutContent from "../content/other/about.md";
     font-family: "aktiv-grotesk", sans-serif;
     font-weight: 400;
     font-size: 1.25rem;
-    margin-bottom: 0.25rem;
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
   }
 
   .about-page {
-    max-width: 670px;
+    width: 100%;
+    max-width: 1300px;
     margin-bottom: 4rem;
     padding: 0 2rem;
+  }
+  .top-section {
+    max-width: 600px;
+  }
+
+  .col-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(600px, 100%), 1fr));
+    gap: 0rem 2rem;
   }
 
   .about-page .larger-text {
