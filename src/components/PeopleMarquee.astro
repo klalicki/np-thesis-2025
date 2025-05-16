@@ -1,4 +1,7 @@
 ---
+interface Props {
+  reverse?: boolean;
+}
 import { getCollection } from "astro:content";
 
 const allPeople = await getCollection("people");
@@ -8,11 +11,29 @@ const people: String[] = allPeople.map((person) => {
 });
 ---
 
-<div class="people-marquee-container">
-  <p class="people-marquee">
+<div class="people-marquee-container" aria-hidden="true">
+  <p class:list={["people-marquee", Astro.props.reverse && "marquee-reverse"]}>
     {
       people.map((person) => {
-        return <span>{person}</span>;
+        return (
+          <>
+            {person}
+            <span class="padded-star">*</span>
+          </>
+        );
+      })
+    }
+  </p><p
+    class:list={["people-marquee", Astro.props.reverse && "marquee-reverse"]}
+  >
+    {
+      people.map((person) => {
+        return (
+          <>
+            {person}
+            <span class="padded-star">*</span>
+          </>
+        );
       })
     }
   </p>
@@ -23,14 +44,43 @@ const people: String[] = allPeople.map((person) => {
     padding: 1rem 0;
     background-color: var(--color-background);
     max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
   }
 
+  .padded-star {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   .people-marquee {
     display: flex;
     flex-direction: row;
-    overflow: hidden;
     white-space: nowrap;
-    gap: 1.5rem;
+    gap: 0;
     color: var(--color-accent-a);
+    animation-duration: 300s;
+    animation-iteration-count: infinite;
+    animation-name: scrolly;
+    animation-timing-function: linear;
+    font-family: "Sligoil", serif;
+  }
+  .marquee-reverse {
+    animation-direction: reverse;
+  }
+
+  @keyframes scrolly {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  @media (prefers-reduced-motion) {
+    .people-marquee {
+      animation-name: none;
+    }
   }
 </style>

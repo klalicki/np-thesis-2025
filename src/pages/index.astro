@@ -21,7 +21,8 @@ import ProjectLister from "../components/ProjectLister.astro";
       </h1>
     </div>
   </section>
-  <PeopleMarquee />
+  <PeopleMarquee reverse />
+  <h2>Projects</h2>
   <ProjectLister />
 </Layout>
 
@@ -34,6 +35,7 @@ import ProjectLister from "../components/ProjectLister.astro";
     height: 85vh;
   }
   .welcome-title {
+    font-family: "Sligoil", serif;
     font-size: clamp(70px, 10vw, 200px);
     font-weight: 400;
     display: flex;
