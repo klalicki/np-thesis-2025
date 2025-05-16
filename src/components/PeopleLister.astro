@@ -34,7 +34,7 @@ const people = await getCollection("people");
   .people-list {
     display: grid;
     grid-template-columns: 1fr;
-    gap: var(--size-page-margin);
+    gap: 4rem;
     max-width: var(--size-page-width);
     padding: 4rem;
     width: 100%;
@@ -68,12 +68,13 @@ const people = await getCollection("people");
     font-size: 1.5rem;
     display: inline;
     align-self: center;
+    margin-top: 1rem;
   }
 
   @media screen and (min-width: 700px) {
     .people-list {
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      padding: 2rem;
+      padding: 4rem;
     }
   }
 </style>
