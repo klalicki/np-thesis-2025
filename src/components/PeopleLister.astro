@@ -14,7 +14,12 @@ const people = await getCollection("people");
           <Image
             class="people-card-image"
             src={person.data.headshot}
-            alt={person.data.name}
+            alt={""}
+          />
+          <Image
+            class="people-card-image-alt"
+            src={person.data.headshotAlt}
+            alt={""}
           />
           <p class="people-card-name">{person.data.name}</p>
         </a>
@@ -37,10 +42,28 @@ const people = await getCollection("people");
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
+    text-decoration: none;
+    position: relative;
   }
-  .people-card-image {
+  .people-card-image,
+  .people-card-image-alt {
     width: auto;
     height: auto;
+  }
+  .people-card-image-alt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
+  .people-card:hover,
+  .people-card:focus-visible .people-card-image-alt {
+    opacity: 1;
+  }
+  .people-card-name {
+    font-family: "Sligoil", serif;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5rem;
   }
 </style>
