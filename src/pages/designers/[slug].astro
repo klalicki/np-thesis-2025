@@ -40,7 +40,7 @@ if (!entry) {
     </div>
     <div class="bio-content-wrapper">
       <div class="bio-text-wrapper">
-        <h1 class="star-after">{entry.data.name}</h1>
+        <h1 class="star-after bio-name">{entry.data.name}</h1>
         <div class="bio-info-group">
           <p>
             <span class="visually-hidden">Pronouns:</span>
@@ -84,9 +84,14 @@ if (!entry) {
   .bio-image-wrapper {
     max-width: 450px;
   }
+  .bio-name {
+    font-family: "Sligoil", serif;
+    font-weight: 400;
+    font-size: 3rem;
+  }
   .bio-text {
     font-size: 1.25rem;
-    line-height: 1.5;
+    line-height: 1.6;
     padding-left: 2rem;
     margin-top: 2rem;
   }
@@ -98,8 +103,11 @@ if (!entry) {
     padding: 2rem 0;
   }
   .bio-info-group {
-    line-height: 1;
+    line-height: 1.5;
     font-size: 1.25rem;
     margin-top: 2rem;
+  }
+  .bio-info-group p {
+    font-family: "Sligoil", serif;
   }
 </style>
