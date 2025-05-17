@@ -1,6 +1,11 @@
 # SUNY New Paltz Design Show 2025 Site
 
-This site uses Astro, a Node.js-based static site generator, to create a fast,
+This site uses Astro, a Node.js-based static site generator. Some benefits of this include:
+
+- **Static Output**: The site is pre-rendered into static HTML, which can be served quickly and efficiently. It is set up to produce a small amount of client-side JavaScript for progressive enhancement (to support view transitions and link prefetching) but the site is fully functional without it.
+- **Organized Content**: The site uses a file-based structure for source content - each student has a folder which contains a markdown file with their project details, as well as all images.
+- **Image Optimization**: The site uses Astro's built-in image optimization to resize and compress images for much faster loading times. The site currently resizes converts all images to WebP format at build time. When deployed via Netlify, the optimized images are cached between builds, to allow for fast build times - most builds will not require the images to be re-processed, and will take less than 30 seconds. Full builds in which the images are re-processed take about 2 minutes.
+- **Typed Content**: The site uses Astro's [Content Collections](https://docs.astro.build/en/guides/content-collections/) API to define the structure of the content. This allows for fully typed content in front-end templates for a much smoother development experience.
 
 ## Quickstart
 
@@ -16,7 +21,7 @@ Then, start the development server:
 npm run dev
 ```
 
-## 🚀 Folder Structure
+## Folder Structure
 
 Inside of this Astro project, you'll see the following folders and files:
 
