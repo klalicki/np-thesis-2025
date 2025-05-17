@@ -48,6 +48,7 @@ const people: String[] = allPeople.map((person) => {
     display: flex;
     flex-direction: row;
     gap: 0;
+    margin: 2rem 0;
   }
 
   .padded-star {
@@ -68,6 +69,10 @@ const people: String[] = allPeople.map((person) => {
   }
   .marquee-reverse {
     animation-direction: reverse;
+  }
+
+  .people-marquee:hover {
+    animation-play-state: paused;
   }
 
   @keyframes scrolly {
