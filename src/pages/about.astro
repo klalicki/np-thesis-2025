@@ -3,11 +3,16 @@ import Layout from "../layouts/Layout.astro";
 import AboutContent from "../content/other/about-top.md";
 import BottomLeftContent from "../content/other/about-bottom-l.md";
 import BottomRightContent from "../content/other/about-bottom-r.md";
+import Button from "../components/Button.astro";
+import ButtonGroup from "../components/ButtonGroup.astro";
 ---
 
 <Layout pageTitle="About">
   <div class="about-page">
     <h1 class="big-header">About</h1>
+    <div class="button-wrapper">
+      <Button href="/" color="accent-a">View catalog PDF</Button>
+    </div>
     <div class="top-section">
       <AboutContent />
     </div>
@@ -60,7 +65,6 @@ import BottomRightContent from "../content/other/about-bottom-r.md";
   .about-page {
     width: 100%;
     max-width: 1300px;
-    margin-bottom: 4rem;
     padding: 0 2rem;
   }
   .top-section {
@@ -75,5 +79,8 @@ import BottomRightContent from "../content/other/about-bottom-r.md";
 
   .about-page .larger-text {
     font-size: 1.5rem;
+  }
+  .button-wrapper {
+    margin: 2rem 0;
   }
 </style>

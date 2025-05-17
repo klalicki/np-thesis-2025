@@ -106,6 +106,8 @@ import { ClientRouter } from "astro:transitions";
     flex-direction: column;
     align-items: center;
     position: relative;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
   .bg-img {
     position: absolute;
@@ -158,5 +160,24 @@ import { ClientRouter } from "astro:transitions";
 
   .strikeout {
     text-decoration: line-through;
+  }
+
+  .fp-activ-grotesk,
+  .fp-sligoil,
+  .fp-compagnon {
+    background-color: var(--color-accent-b);
+    padding: 0 0.25rem;
+
+    color: var(--color-background);
+    display: inline-block;
+  }
+  .fp-sligoil {
+    font-family: "Sligoil", serif;
+  }
+  .fp-compagnon {
+    font-family: "Compagnon", monospace;
+  }
+  .fp-activ-grotesk {
+    font-family: "aktiv-grotesk", sans-serif;
   }
 </style>
