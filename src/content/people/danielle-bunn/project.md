@@ -1,5 +1,5 @@
 ---
-name: Daneille Bunn
+name: Danielle Bunn
 pronouns: she/her
 location: Pleasant Valley, NY
 headshot: "headshot_1.jpg"

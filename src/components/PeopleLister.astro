@@ -12,7 +12,7 @@ const peopleSorted = people.sort((a, b) => {
 
 <div class="people-list">
   {
-    people.map((person) => {
+    peopleSorted.map((person) => {
       return (
         <a class="people-card" href={"/designers/" + person.id + "/"}>
           <Image
@@ -68,7 +68,8 @@ const peopleSorted = people.sort((a, b) => {
     opacity: 1;
   }
 
-  .people-card:hover .people-card-name, .people-card:focus-visible .people-card-name {
+  .people-card:hover .people-card-name,
+  .people-card:focus-visible .people-card-name {
     color: var(--color-accent-c);
   }
   .people-card-name {
