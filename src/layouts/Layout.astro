@@ -87,6 +87,14 @@ import { ClientRouter } from "astro:transitions";
     text-decoration: inherit;
   }
 
+  .star-after-inline {
+    display: inline;
+    padding-right: 0;
+  }
+
+  .star-after-inline::after {
+    right: -0.6em;
+  }
   .star-before {
     position: relative;
     display: inline-block;

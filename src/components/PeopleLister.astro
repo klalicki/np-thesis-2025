@@ -28,7 +28,9 @@ const peopleSorted = people.sort((a, b) => {
             alt={""}
             width={600}
           />
-          <p class="people-card-name star-after">{person.data.name}</p>
+          <p class="people-card-name">
+            <span class="star-after star-after-inline">{person.data.name}</span>
+          </p>
         </a>
       );
     })
